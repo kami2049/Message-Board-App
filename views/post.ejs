@@ -13,6 +13,12 @@
 			<li><a href="/post">Posted messages</a></li>
 		</ul>
 	</nav>
-
+	<div>
+		<% for (var i = 0; i < message.length; i++) { %>
+		<p>Title: <%= message[i].title %></p>
+		<p>Body: <%= message[i].body %></p>
+		<% } %>
+	</div>
+	
 </body>
 </html>
