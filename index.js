@@ -3,6 +3,13 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
+const message = [
+	{
+		title:"hello world",
+	body:"the go to intro for new developers"
+	}
+];
+
 app.get('/', function (req, res) {
   res.render('newMessage')
 });
@@ -12,7 +19,8 @@ app.get('/newMessage', function (req, res) {
 });
 
 app.get('/post', function (req, res) {
-  res.render('post')
+	console.log(message);
+  res.render('post', {message: message});
 });
 
 app.listen(3000, function () {
