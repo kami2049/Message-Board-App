@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const db = require('./db');
 const app = express();
 
 app.set('view engine', 'ejs');
