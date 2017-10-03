@@ -15,9 +15,9 @@ const message = [
 	}
 ];
 
-app.get('/', function (req, res) {
-  res.render('newMessage')
-});
+const indexController = require('./controllers');
+
+app.get('/', indexController.index);
 
 app.get('/newMessage', function (req, res) {
   res.render('newMessage')
